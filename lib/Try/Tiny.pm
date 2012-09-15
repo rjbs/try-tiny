@@ -10,7 +10,7 @@ BEGIN {
 	@ISA = qw(Exporter);
 }
 
-$VERSION = "0.11";
+$VERSION = "0.12";
 
 $VERSION = eval $VERSION;
 
@@ -246,7 +246,7 @@ still be invoked.
 
 Once all execution is finished then the finally block if given will execute.
 
-=item catch (&;$)
+=item catch (&;@)
 
 Intended to be used in the second argument position of C<try>.
 
@@ -266,7 +266,7 @@ L<Class::Throwable>), you'll need to do:
 
 	local $@ = $_;
 
-=item finally (&;$)
+=item finally (&;@)
 
   try     { ... }
   catch   { ... }
